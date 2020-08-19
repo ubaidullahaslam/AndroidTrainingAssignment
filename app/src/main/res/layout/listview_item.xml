@@ -2,16 +2,28 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
              android:layout_width="match_parent"
              android:layout_height="match_parent" >
-    <TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="85dp">
+
         <ImageView
-                android:id="@+id/img"
-                android:layout_width="50dp"
-                android:layout_height="50dp"/>
+            android:id="@+id/img"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
 
         <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp" />
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="13dp"
+            android:paddingStart="13dp"
+            android:paddingLeft="13dp"
+            android:paddingTop="13dp"
+            android:paddingEnd="13dp"
+            android:paddingRight="13dp"
+            android:paddingBottom="13dp"
+            android:text="Hello" />
 
     </TableRow>
 </TableLayout>

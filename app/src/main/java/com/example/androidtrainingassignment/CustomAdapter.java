@@ -59,19 +59,17 @@ class CustomAdapter implements ListAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Model model = arrayList.get(position);
+        final Model model = arrayList.get(position);
         if (convertView == null) {
             LayoutInflater layoutInflater = LayoutInflater.from(context);
             convertView = layoutInflater.inflate(R.layout.listview_item, null);
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    TextView tittle = v.findViewById(R.id.title);
-                    ImageView imag = v.findViewById(R.id.img);
 
                     Intent intent = new Intent(v.getContext(), DetailActivity.class);
-                    intent.putExtra("tittle", tittle.getText()); //Optional parameters
-                    intent.putExtra("imag", (Integer) imag.getTag()); //Optional parameters
+                    intent.putExtra("tittle", model.subjectName); //Optional parameters
+                    intent.putExtra("imag", model.image); //Optional parameters
                     v.getContext().startActivity(intent);
                 }
             });
